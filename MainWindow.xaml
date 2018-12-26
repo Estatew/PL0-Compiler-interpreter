@@ -1,0 +1,58 @@
+﻿<Window x:Class="Compiler.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Compiler"
+        mc:Ignorable="d"
+        Title="PL0编译器" Height="774.837" Width="1241.045">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="92*"/>
+            <ColumnDefinition Width="689*"/>
+            <ColumnDefinition Width="377*"/>
+            <ColumnDefinition Width="77*"/>
+        </Grid.ColumnDefinitions>
+
+        <Image x:Name="Image2_png" Grid.ColumnSpan="4" Margin="0,0,-15.6,-28.4" Source="Image2.png" Stretch="Fill"/>
+
+        <TextBox x:Name="PL0TextBox" HorizontalAlignment="Left" Height="278" Margin="75,162,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="299" Background="#FFDDDDDD" Grid.ColumnSpan="2"/>
+        <TextBox x:Name="PcodeTextBox" HorizontalAlignment="Left" Height="386" Margin="344.771,162,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="304" Background="#FFDDDDDD" Grid.Column="1"/>
+        <TextBox x:Name="symbolTextBox" HorizontalAlignment="Left" Height="186" Margin="75,514,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="299" Background="#FFDDDDDD" Grid.ColumnSpan="2"/>
+        <TextBox x:Name="inputTextBox" HorizontalAlignment="Left" Height="37" Margin="24.2,365,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="267" TextChanged="InputTextBox_TextChanged" Grid.Column="2" RenderTransformOrigin="0.44,-2.574" Background="#FFDDDDDD" FontSize="16"/>
+        <TextBox x:Name="errorTextBox" HorizontalAlignment="Left" Height="96" Margin="345,604,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="721" Grid.ColumnSpan="3" Background="#FFDDDDDD" Grid.Column="1"/>
+        <Label x:Name="label" Content="输入框:" HorizontalAlignment="Left" Margin="24.2,316,0,0" VerticalAlignment="Top" FontSize="20" Grid.Column="2" Foreground="#FFC2CCCC" RenderTransformOrigin="0.498,0.937"/>
+        <Label x:Name="label1" Content="错误信息:" HorizontalAlignment="Left" Margin="344.771,564,0,0" VerticalAlignment="Top" Width="101" FontSize="20" Foreground="#FFC2CCCC" Grid.Column="1"/>
+        <Button x:Name="selectButton" Content="选择文件" Grid.Column="2" HorizontalAlignment="Left" Margin="94.2,147,0,0" VerticalAlignment="Top" Width="197" Height="33" FontSize="18" Click="Button1_Click" BorderBrush="#FF422D2D">
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FF838282"/>
+                    <GradientStop Color="White" Offset="0.924"/>
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
+        <Button x:Name="compileButton" Content="编译" Grid.Column="2" HorizontalAlignment="Left" Margin="94.2,200,0,0" VerticalAlignment="Top" Width="197" Height="34" FontSize="18" Click="CompileButton_Click">
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FF838282" Offset="0"/>
+                    <GradientStop Color="White" Offset="0.767"/>
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
+        <Label x:Name="label2" Content="符号表:" HorizontalAlignment="Left" Margin="75,465,0,0" VerticalAlignment="Top" FontSize="20" Foreground="#FFC2CCCC" Grid.ColumnSpan="2"/>
+        <Label x:Name="label3" Content="PL0代码:" HorizontalAlignment="Left" Margin="75,113,0,0" VerticalAlignment="Top" FontSize="20" Foreground="#FFC2CCCC" Grid.ColumnSpan="2"/>
+        <Label x:Name="label4" Content="pcode:" HorizontalAlignment="Left" Margin="344.771,113,0,0" VerticalAlignment="Top" FontSize="22" Foreground="#FFC2CCCC" Grid.Column="1"/>
+        <Label x:Name="label5" Content="PL0 编 译 解 释 器" HorizontalAlignment="Left" Margin="308.771,30,0,0" VerticalAlignment="Top" FontSize="48" Foreground="#FFC2CCCC" Grid.ColumnSpan="2" Width="427" Grid.Column="1"/>
+        <TextBox x:Name="runTextBox" HorizontalAlignment="Left" Height="96" Margin="24.2,452,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="267" Grid.Column="2" Background="#FFDDDDDD" FontSize="16"/>
+        <Button x:Name="runButton" Content="运行" Grid.Column="2" HorizontalAlignment="Left" Margin="94.2,256,0,0" VerticalAlignment="Top" Width="197" Height="32" FontSize="18" Click="RunButton_Click">
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FF838282" Offset="0"/>
+                    <GradientStop Color="White" Offset="0.59"/>
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
+        <Label x:Name="label6" Content="运行结果：" HorizontalAlignment="Left" Margin="24.2,414,0,0" VerticalAlignment="Top" FontSize="20" Grid.Column="2" Foreground="#FFC2CCCC"/>
+
+    </Grid>
+</Window>
